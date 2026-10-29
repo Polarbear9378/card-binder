@@ -62,3 +62,8 @@ The interface is responsive for modern iPhone/iPad Safari, Chrome, and Mac brows
 
 ## Verification
 JavaScript syntax and deterministic tests passed for old backup compatibility, visual binder state, wishlist acquisition, cross-page moves/undo, quantity preservation, Excel package/XML structure and acquisition/reversal, and CDT/CST labels. Native testing on a physical iPhone/iPad has not been performed. No source file contains login, syncing, or database setup credentials.
+
+## Custom cards
+Use **Add custom card** in Explore or your collection for cards missing from the catalog. Enter name, set, number, status, categories, condition, quantity and optional manual USD value. Photos are resized/re-encoded locally (original EXIF location metadata is discarded). Photos use browser space, so download recovery backups regularly. Custom cards work in binders, Owned/Wishlist and Excel. Excel includes manual values and a photo-backup note; custom photos are retained in recovery backups, not embedded into Excel. Open a saved custom card and choose **Edit custom details / photo** to change it. Manual values never refresh automatically.
+
+To update an existing GitHub Pages site, download a recovery backup first, then upload these files to the same repository root and commit. Keep the same website address to retain browser-local data.
