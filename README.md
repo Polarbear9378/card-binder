@@ -2,6 +2,11 @@
 
 A free static Pokémon collection and binder planner. No sign-in, database account, billing account, cloud sync, or ChatGPT login.
 
+## Upload to GitHub
+1. Keep “Keep my email addresses private” enabled in GitHub account Settings → Emails before uploading.
+2. Create a new public repository. Upload the files inside this folder, not the ZIP or a nested folder. Preserve the `favicon.svg`, `.nojekyll`, and both export files along with index.html, style.css, and app.js.
+3. Enable Settings → Pages → Deploy from a branch → main → / (root).
+4. Open the address GitHub provides. No extra services are needed.
 
 All files in this package are generic and contain no personal name, email, collection, credential, or account profile. GitHub still shows your username and public account/commit information; changing your email privacy does not remove old commits. This package is for the new repository, not the separate hosted sign-in edition.
 
@@ -50,7 +55,7 @@ Export includes card/set/number/language/finish, quantities, conditions, categor
 ## Card catalog and prices
 Card data and images are requested from TCGdex. Catalog coverage is not guaranteed to include every printing ever made. Images and USD prices may be missing or mismatched. Check valuable cards independently. No paid API keys are used.
 
-The page checks cards due for a refresh on opening, then hourly while the browser runs. Manual Refresh prices is available. The banner shows the last successful fetch and next check in America/Chicago time: CDT in summer and CST in winter. Each card shows the provider's price date. Provider updates follow their own schedule; fetching today does not guarantee a new price today. Closed or sleeping browsers do not run checks.
+The page checks cards due for a refresh on opening, then every 15 minutes while the browser runs. Manual Refresh prices is available. The banner shows the last successful fetch and next check in America/Chicago time: CDT in summer and CST in winter. Each card shows the provider's price date. Provider updates follow their own schedule; fetching today does not guarantee a new price today. Closed or sleeping browsers do not run checks.
 
 ## Device support and privacy
 The interface is responsive for modern iPhone/iPad Safari, Chrome, and Mac browsers. It uses tap-based binder controls, native file import/download, and UTF-8 Excel export. Internet is needed for fresh catalog, images, and prices. The app makes no analytics or external-font requests and uses a no-referrer policy. Card data/image providers and GitHub still receive ordinary network traffic; this is not anonymous browsing.
@@ -62,3 +67,10 @@ JavaScript syntax and deterministic tests passed for old backup compatibility, v
 Use **Add custom card** in Explore or your collection for cards missing from the catalog. Enter name, set, number, status, categories, condition, quantity and optional manual USD value. Photos are resized/re-encoded locally (original EXIF location metadata is discarded). Photos use browser space, so download recovery backups regularly. Custom cards work in binders, Owned/Wishlist and Excel. Excel includes manual values and a photo-backup note; custom photos are retained in recovery backups, not embedded into Excel. Open a saved custom card and choose **Edit custom details / photo** to change it. Manual values never refresh automatically.
 
 To update an existing GitHub Pages site, download a recovery backup first, then upload these files to the same repository root and commit. Keep the same website address to retain browser-local data.
+
+## Explore badges, removal and missing images
+Explore shows Owned quantities and Wishlist status for the selected language. Opening a saved catalog card edits that saved entry rather than adding a duplicate. If both statuses exist for a card, both badges appear; use the separate Owned/Wishlist pages to choose a specific entry.
+
+The direct **Remove · keep binder** action takes an entry out of Owned/Wishlist and keeps it as **Binder plan only**. Every pocket reference stays in place. **Undo removal** reverses the latest removal during the session. Binder studio's shelf filter includes **Binder plans only**; open Card details to restore its Owned/Wishlist status. **Delete everywhere…** is a separate confirmed action that clears placements. Excel's **All cards** tab includes Binder plan only rows; these are excluded from Owned and Wishlist tabs. Recovery backups retain all plans and photos.
+
+Catalog and saved-card checks run every 15 minutes while the page runs, and card details refresh when opened. Explore offers **Refresh catalog** and **Retry photos**. Smaller thumbnails load first, with alternative formats on failure. Missing thumbnail records are checked for fuller details; valid prior photos and descriptive fields survive incomplete responses. Cards with available artwork appear first. The provider may still lack images, details or prices; retries cannot create absent source data. No background service, account, fee or cloud sync is added.
