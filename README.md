@@ -2,11 +2,6 @@
 
 A free static Pokémon collection and binder planner. No sign-in, database account, billing account, cloud sync, or ChatGPT login.
 
-## Upload to GitHub
-1. Keep “Keep my email addresses private” enabled in GitHub account Settings → Emails before uploading.
-2. Create a new public repository. Upload the files inside this folder, not the ZIP or a nested folder. Preserve the `favicon.svg`, `.nojekyll`, and both export files along with index.html, style.css, and app.js.
-3. Enable Settings → Pages → Deploy from a branch → main → / (root).
-4. Open the address GitHub provides. No extra services are needed.
 
 All files in this package are generic and contain no personal name, email, collection, credential, or account profile. GitHub still shows your username and public account/commit information; changing your email privacy does not remove old commits. This package is for the new repository, not the separate hosted sign-in edition.
 
